@@ -1,28 +1,23 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="">
+	<div>
+		<ul>
+			<li v-for="(item, index) in arr" :key="index">{{ item }}</li>
+		</ul>
+		<button @click="btn">下标1位置插入新来的</button>
+	</div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	export default {
+		data() {
+			return {
+				arr: ['老大', '老二', '老三'],
+			};
+		},
+		methods: {
+			btn() {
+				this.arr.splice(1, 0, '新来的');
+			},
+		},
+	};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang=""></style>
