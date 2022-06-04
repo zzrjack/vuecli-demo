@@ -1,23 +1,7 @@
 <template lang="">
-	<div>
-		<ul>
-			<li v-for="(item, index) in arr" :key="index">{{ item }}</li>
-		</ul>
-		<button @click="btn">下标1位置插入新来的</button>
-	</div>
+	<div></div>
 </template>
 <script>
-	export default {
-		data() {
-			return {
-				arr: ['老大', '老二', '老三'],
-			};
-		},
-		methods: {
-			btn() {
-				this.arr.splice(1, 0, '新来的');
-			},
-		},
-	};
+	export default {};
 </script>
 <style lang=""></style>
